@@ -9,7 +9,9 @@ import { MaterialModule } from '../../angular-material/material/material.module'
   styleUrl: './pregunta2.component.css'
 })
 export class Pregunta2Component {
-  
+
+  utilidad: number | null = null;
+
   calcularUtilidad(salario: number, anos: number): number | null {
     if (isNaN(salario) || isNaN(anos)) {
       return null;
@@ -31,10 +33,10 @@ export class Pregunta2Component {
   submit(salarioInput: HTMLInputElement, anosInput: HTMLInputElement): void {
     const salario = parseFloat(salarioInput.value);
     const anos = parseInt(anosInput.value, 10);
-    const utilidad = this.calcularUtilidad(salario, anos);
+    this.utilidad = this.calcularUtilidad(salario, anos);
 
-    if (utilidad !== null) {
-      alert(`La utilidad calculada es: ${utilidad.toFixed(2)}`);
+    if (this.utilidad !== null) {
+      alert(`La utilidad calculada es: ${this.utilidad.toFixed(2)}`);
     } else {
       alert('Por favor, ingrese valores válidos.');
     }
