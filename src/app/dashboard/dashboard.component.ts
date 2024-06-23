@@ -16,10 +16,6 @@ export class DashboardComponent {
     this.authService.logout();
     this.router.navigateByUrl("/login")
   }
-
-  irHome():void{
-    this.router.navigate(["home"],{relativeTo: this.route})
-  }
   irPregunta2():void{
     this.router.navigate(["pregunta2"],{relativeTo: this.route})
   }
