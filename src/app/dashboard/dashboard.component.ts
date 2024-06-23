@@ -27,6 +27,6 @@ export class DashboardComponent {
     this.router.navigate(["pregunta3"],{relativeTo: this.route})
   }
   irPregunta4():void{
-    this.router.navigate(["pregunta3"],{relativeTo: this.route})
+    this.router.navigate(["pregunta4"],{relativeTo: this.route})
   }
 }
